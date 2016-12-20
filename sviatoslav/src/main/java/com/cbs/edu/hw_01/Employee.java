@@ -1,4 +1,4 @@
-package com.cbs.edu.HW_01;
+package com.cbs.edu.hw_01;
 
 
 import java.util.ArrayList;
