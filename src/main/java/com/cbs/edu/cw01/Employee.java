@@ -1,7 +1,14 @@
 package com.cbs.edu.cw01;
 
+import java.util.ArrayList;
+
 public class Employee {
 
     String name;
-    int salary;
+    ArrayList<Employee> employees;
+
+    public Employee(String name) {
+        this.name = name;
+        this.employees = new ArrayList<Employee>();
+    }
 }

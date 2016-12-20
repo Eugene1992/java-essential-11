@@ -12,7 +12,5 @@ public class Test {
         empTwo.say();
 
         System.out.println(empCount);
-
-        int a = 10;
     }
 }
