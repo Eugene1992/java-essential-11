@@ -5,9 +5,9 @@ package com.cbs.edu.hw_03;
  */
 public class MainShape {
     public static void main(String[] args) {
-        Shape rectangle = new Rectangle();
+        Shape rectangle = new Rectangle(2, 4);
         Shape triangle = new Triangle();
-        Shape square = new Square();
+        Shape square = new Square(4);
         Shape parallelogram = new Parallelogram();
         Shape rhombus = new Rhombus();
         Shape trapezoid = new Trapezoid(12);

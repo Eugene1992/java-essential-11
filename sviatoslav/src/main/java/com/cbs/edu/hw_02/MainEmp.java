@@ -3,6 +3,7 @@ package com.cbs.edu.hw_02;
 import java.util.ArrayList;
 
 import static com.cbs.edu.hw_02.EmployeeService.getSalaryInterval;
+import static com.cbs.edu.hw_02.EmployeeService.getSalaryIntervalForEach;
 
 /**
  * Created by Sviatoslav on 22.12.2016.
@@ -37,8 +38,9 @@ public class MainEmp {
         }*/
         System.out.println();
         System.out.println("Employees in department " + Department.size);
-        for (int i = 0; i < department.getEmp().size(); i++) {
-            System.out.println(getSalaryInterval(department, 10000, 20000));
+
+        for (Employee employee : getSalaryIntervalForEach(department, 10000, 20000)) {
+            System.out.printf("%s : %d : %d\n", employee.getName(), employee.getAge(), employee.getSalary());
         }
     }
 }

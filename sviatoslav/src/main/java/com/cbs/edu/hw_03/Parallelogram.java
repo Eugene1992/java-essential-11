@@ -13,4 +13,8 @@ public class Parallelogram  extends Shape{
         int area = this.a * this.b;
         return area;
     }
+
+    public String getName() {
+        return getClass().getSimpleName();
+    }
 }

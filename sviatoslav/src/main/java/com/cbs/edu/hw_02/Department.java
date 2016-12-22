@@ -14,7 +14,6 @@ public class Department {
     public Department(String title) {
         this.title = title;
         this.emp = new ArrayList<>();
-
     }
 
     public void addEmployee(Employee employee){
