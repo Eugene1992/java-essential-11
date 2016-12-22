@@ -14,10 +14,15 @@ public class Department {
     public Department(String title) {
         this.title = title;
         this.emp = new ArrayList<>();
+
     }
 
-     void addEmployee(ArrayList<Employee> emp ,Employee employee){
+    public void addEmployee(Employee employee){
         emp.add(employee);
         size++;
+    }
+
+    public ArrayList<Employee> getEmp() {
+        return emp;
     }
 }

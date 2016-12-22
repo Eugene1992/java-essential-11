@@ -2,6 +2,8 @@ package com.cbs.edu.hw_02;
 
 import java.util.ArrayList;
 
+import static com.cbs.edu.hw_02.EmployeeService.getSalaryInterval;
+
 /**
  * Created by Sviatoslav on 22.12.2016.
  */
@@ -15,27 +17,28 @@ public class MainEmp {
         Employee emp5 = new Employee("Lexa", 40, 25000);
         Employee emp6 = new Employee("Bob", 34, 17000);
         Employee emp7 = new Employee("Robert", 25, 40000);
-        
-        ArrayList<Employee> employees = new ArrayList<>();
+
 
         Department department = new Department("Department of developers");
-        
-        department.addEmployee(employees, emp);
-        department.addEmployee(employees, emp1);
-        department.addEmployee(employees, emp2);
-        department.addEmployee(employees, emp3);
-        department.addEmployee(employees, emp4);
-        department.addEmployee(employees, emp5);
-        department.addEmployee(employees, emp6);
-        department.addEmployee(employees, emp7);
 
-        for (int i = 0; i < employees.size(); i++) {
-            System.out.println(employees.get(i).getName() + " " +
-                                employees.get(i).getAge() + " " +
-                                  employees.get(i).getSalary());
-        }
+        department.addEmployee(emp);
+        department.addEmployee(emp1);
+        department.addEmployee(emp2);
+        department.addEmployee(emp3);
+        department.addEmployee(emp4);
+        department.addEmployee(emp5);
+        department.addEmployee(emp6);
+        department.addEmployee(emp7);
+
+        /*for (int i = 0; i < department.getEmp().size(); i++) {
+            System.out.println(department.getEmp().get(i).getName() + " " +
+                                  department.getEmp().get(i).getAge() + " " +
+                                     department.getEmp().get(i).getSalary());
+        }*/
         System.out.println();
         System.out.println("Employees in department " + Department.size);
+        for (int i = 0; i < department.getEmp().size(); i++) {
+            System.out.println(getSalaryInterval(department, 10000, 20000));
+        }
     }
-
 }
