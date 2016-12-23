@@ -1,11 +1,13 @@
 package com.cbs.edu.hw_04;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Sviatoslav on 23.12.2016.
  */
 public class EmployeeDAO implements IEmployeeDAO {
+
     private ArrayList<Employee> employees;
 
     public EmployeeDAO() {
@@ -28,16 +30,12 @@ public class EmployeeDAO implements IEmployeeDAO {
     }
 
     @Override
-    public String get(int id) {
-        String emp = employees.get(id).getName() + " " + employees.get(id).getAge() + " " + employees.get(id).getSalary();
-        return emp;
+    public Employee get(int id) {
+        return employees.get(id);
     }
 
     @Override
-    public void getAll(Employee... employee) {
-        for (Employee emp : employee) {
-            System.out.println(emp.getName() + " " + emp.getAge() + " " + emp.getSalary());
-        }
-
+    public List<Employee> getAll() {
+        return employees;
     }
 }
