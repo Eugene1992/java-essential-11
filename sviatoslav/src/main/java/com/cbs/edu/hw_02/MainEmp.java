@@ -2,7 +2,7 @@ package com.cbs.edu.hw_02;
 
 import java.util.ArrayList;
 
-import static com.cbs.edu.hw_02.EmployeeService.getSalaryInterval;
+import static com.cbs.edu.hw_02.EmployeeService.getAgeIntervalForEach;
 import static com.cbs.edu.hw_02.EmployeeService.getSalaryIntervalForEach;
 
 /**
@@ -31,15 +31,15 @@ public class MainEmp {
         department.addEmployee(emp6);
         department.addEmployee(emp7);
 
-        /*for (int i = 0; i < department.getEmp().size(); i++) {
-            System.out.println(department.getEmp().get(i).getName() + " " +
-                                  department.getEmp().get(i).getAge() + " " +
-                                     department.getEmp().get(i).getSalary());
-        }*/
-        System.out.println();
-        System.out.println("Employees in department " + Department.size);
 
         for (Employee employee : getSalaryIntervalForEach(department, 10000, 20000)) {
+            System.out.printf("%s : %d : %d\n", employee.getName(), employee.getAge(), employee.getSalary());
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        for (Employee employee : getAgeIntervalForEach(department, 20, 30)) {
             System.out.printf("%s : %d : %d\n", employee.getName(), employee.getAge(), employee.getSalary());
         }
     }
