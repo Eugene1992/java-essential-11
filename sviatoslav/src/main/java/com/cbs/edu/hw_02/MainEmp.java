@@ -1,9 +1,6 @@
 package com.cbs.edu.hw_02;
 
-import java.util.ArrayList;
-
-import static com.cbs.edu.hw_02.EmployeeService.getAgeIntervalForEach;
-import static com.cbs.edu.hw_02.EmployeeService.getSalaryIntervalForEach;
+import static com.cbs.edu.hw_02.EmployeeService.*;
 
 /**
  * Created by Sviatoslav on 22.12.2016.
@@ -42,5 +39,10 @@ public class MainEmp {
         for (Employee employee : getAgeIntervalForEach(department, 20, 30)) {
             System.out.printf("%s : %d : %d\n", employee.getName(), employee.getAge(), employee.getSalary());
         }
+
+        for (Employee employee : addBonus(department, 15000)) {
+            System.out.printf("%s : %d : %d\n", employee.getName(), employee.getAge(), employee.getSalary());
+        }
+
     }
 }
