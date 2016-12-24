@@ -5,15 +5,18 @@ package com.cbs.edu.hw_03;
  */
 public class Trapezoid extends Shape{
     private int h;
-    public Trapezoid(int h){
-        super(10,15);
+    public Trapezoid(int a, int b, int h , String name){
+        super(a, b, name);
         this.h = h;
     }
 
     @Override
     public double getArea() {
-        double area =( ( this.a + this.b ) * this.h) / 2;
-        return area;
+        return ( ( a + b ) * h) / 2;
     }
 
+    @Override
+    public String getName() {
+        return super.getName();
+    }
 }

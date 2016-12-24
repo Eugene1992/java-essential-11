@@ -4,14 +4,17 @@ package com.cbs.edu.hw_03;
  * Created by Sviatoslav on 22.12.2016.
  */
 public class Triangle extends Shape {
-    public Triangle() {
-        super(12, 32);
+    public Triangle(int a, int b, String name) {
+        super(a, b, name);
     }
 
     @Override
     public double getArea() {
-        int area = (this.a * this.b)/2;
-        return area;
+        return ( a * b ) / 2;
     }
 
+    @Override
+    public String getName() {
+        return super.getName();
+    }
 }
