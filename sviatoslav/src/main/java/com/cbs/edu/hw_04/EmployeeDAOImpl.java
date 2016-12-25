@@ -6,11 +6,11 @@ import java.util.List;
 /**
  * Created by Sviatoslav on 23.12.2016.
  */
-public class EmployeeDAO implements IEmployeeDAO {
+public class EmployeeDAOImpl implements IEmployeeDAO {
 
     private ArrayList<Employee> employees;
 
-    public EmployeeDAO() {
+    public EmployeeDAOImpl() {
         this.employees = new ArrayList<>();
     }
 
