@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>sviatoslav</module>
+        <module>dmitriy</module>
     </modules>
 
     <groupId>com.cdb.edu</groupId>
