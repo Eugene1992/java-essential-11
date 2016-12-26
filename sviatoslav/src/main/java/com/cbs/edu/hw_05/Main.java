@@ -11,17 +11,17 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         int sec = 100000000;
-        TimeStampImpl timeStamp = new TimeStampImpl();
         List<Integer> arrList = new ArrayList<>();
         List<Integer> linkedList = new LinkedList<>();
+        TimeStampImpl timeStamp = new TimeStampImpl(linkedList);
 
         for (int i = 0; i < 20; i++) {
             arrList.add(new Random().nextInt());
             linkedList.add(new Random().nextInt());
         }
 
-        System.out.println("Вставка в конец ArrayLista занимает: " + timeStamp.addLastToList(arrList)/sec + "c");
-        System.out.println("Вставка в конец LinkedLista занимает: " + timeStamp.addLastToList(linkedList)/sec + "c");
+        System.out.println("Вставка в конец ArrayLista занимает: " + timeStamp.addLastToList()/sec + "c");
+        System.out.println("Вставка в конец LinkedLista занимает: " + timeStamp.addLastToList()/sec + "c");
 
         System.out.println();
 

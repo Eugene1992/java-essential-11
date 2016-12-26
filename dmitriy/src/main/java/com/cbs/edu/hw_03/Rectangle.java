@@ -5,17 +5,17 @@ package com.cbs.edu.hw_03;
  */
 public class Rectangle extends Shape {
 
-    public Rectangle (int a, int b, String name) {
-        super (a, b, name);
+    public Rectangle(int a, int b, String name) {
+        super(a, b, name);
     }
 
     @Override
-    public double getSquare(){
-        return a*b;
+    public double getSquare() {
+        return a * b;
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return super.getName();
     }
 }

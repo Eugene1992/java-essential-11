@@ -10,26 +10,25 @@ public class Employee {
     private int salary;
 
 
-    public Employee (String name, int age, int salary)
-    {
+    public Employee(String name, int age, int salary) {
         this.name = name;
         this.age = age;
         this.salary = salary;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 
-    public int getSalary(){
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary){
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 

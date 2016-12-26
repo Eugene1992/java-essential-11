@@ -7,18 +7,18 @@ public class Parallelogram extends Shape {
 
     private int h;
 
-    public Parallelogram (int a, int h, String name){
+    public Parallelogram(int a, int h, String name) {
         super(a, name);
         this.h = h;
     }
 
     @Override
-    public double getSquare(){
-        return a*h;
+    public double getSquare() {
+        return a * h;
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return name;
     }
 }

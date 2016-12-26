@@ -9,24 +9,22 @@ public class Human {
     private int growth;
     private int age;
 
-    public Human (String name, int growth, int age){
+    public Human(String name, int growth, int age) {
         this.name = name;
         this.growth = growth;
         this.age = age;
     }
 
-    public String getName (){
+    public String getName() {
         return name;
     }
 
-    public int getGrowth(){
+    public int getGrowth() {
         return growth;
     }
 
     public int getAge(){
         return age;
     }
-
-
 }
 

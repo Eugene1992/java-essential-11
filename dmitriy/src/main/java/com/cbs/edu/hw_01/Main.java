@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Human> array = new ArrayList(5);
+        ArrayList<Human> array = new ArrayList<>(5);
 
         Human human1 = new Human("Peter", 180, 20);
         Human human2 = new Human("Dima", 170, 19);
@@ -29,12 +29,12 @@ public class Main {
         //Collections.sort(array);
 
         for (int i = 0; i < array.size(); i++) {
-            System.out.println("Human: "+array.get(i).getName()+
-                    "|Growth: "+array.get(i).getGrowth()+
-                    "|Age: "+array.get(i).getAge());
+            System.out.println("Human: " + array.get(i).getName() +
+                    "|Growth: " + array.get(i).getGrowth() +
+                    "|Age: " + array.get(i).getAge());
         }
 
-        System.out.println("\nAvarage growth: " + getAvgGrowth(array));
+        System.out.println("\nAverage growth: " + getAvgGrowth(array));
     }
 }
 

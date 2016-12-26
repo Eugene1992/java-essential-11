@@ -9,7 +9,6 @@ public class Main {
         for (Shape shape : shapes) {
             System.out.printf("%s  square = %1.2f\n", shape.getName(), shape.getSquare());
         }
-
     }
 
     public static void main(String[] args) {

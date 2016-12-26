@@ -7,18 +7,18 @@ public class Triangle extends Shape {
 
     private int h;
 
-    public Triangle (int a, int h, String name){
+    public Triangle(int a, int h, String name) {
         super(a, name);
         this.h = h;
     }
 
     @Override
-    public double getSquare(){
-        return (a*h)/2;
+    public double getSquare() {
+        return a * h / 2;
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return name;
     }
 }

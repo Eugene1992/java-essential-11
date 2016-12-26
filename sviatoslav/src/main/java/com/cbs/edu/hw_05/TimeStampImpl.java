@@ -1,6 +1,5 @@
 package com.cbs.edu.hw_05;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -9,12 +8,17 @@ import java.util.Random;
  */
 public class TimeStampImpl implements ITimeStamp{
 
+    private List<Integer> integers;
 
-    public double addLastToList(List<Integer> list){
+    public TimeStampImpl(List<Integer> employees) {
+        this.integers = employees;
+    }
+
+    public double addLastToList(){
         long sum = 0;
         for (int i = 0; i < 5; i++) {
             long startTime = System.nanoTime();
-            list.add(new Random().nextInt());
+            integers.add(new Random().nextInt());
             long endTime = System.nanoTime();
             sum = sum + (endTime - startTime);
         }

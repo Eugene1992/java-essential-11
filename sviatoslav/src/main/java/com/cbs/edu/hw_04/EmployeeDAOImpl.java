@@ -8,11 +8,12 @@ import java.util.List;
  */
 public class EmployeeDAOImpl implements IEmployeeDAO {
 
-    private ArrayList<Employee> employees;
+    private List<Employee> employees;
 
-    public EmployeeDAOImpl() {
-        this.employees = new ArrayList<>();
+    public EmployeeDAOImpl(List<Employee> employees) {
+        this.employees = employees;
     }
+
     @Override
     public void add(Employee employee) {
         employees.add(employee);
@@ -20,7 +21,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 
     @Override
     public void update(Employee employee, int id) {
-        employees.add(id, employee);
+        employees.set(id, employee);
     }
 
     @Override

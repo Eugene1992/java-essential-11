@@ -6,21 +6,20 @@ import java.util.ArrayList;
  * Created by Дмитрий on 25.12.2016.
  */
 public class Department {
+
     private String tittle;
-    private ArrayList<Employee> person;
-    private int size = 0;
+    private ArrayList<Employee> employees;
 
     public Department(String tittle){
         this.tittle = tittle;
-        this.person = new ArrayList();
+        this.employees = new ArrayList<>();
     }
 
     public  void addEmployee(Employee employee){
-        person.add(employee);
+        employees.add(employee);
     }
 
-    public ArrayList<Employee> getPerson(){
-        return  person;
+    public ArrayList<Employee> getEmployees(){
+        return employees;
     }
-
 }

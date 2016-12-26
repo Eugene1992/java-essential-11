@@ -5,19 +5,17 @@ import java.util.ArrayList;
 /**
  * Created by Дмитрий on 25.12.2016.
  */
-public class HumanService {
+public final class HumanService {
 
-    public static int getAvgGrowth(ArrayList<Human> array)
-    {
+    private HumanService() {
+    }
+
+    public static int getAvgGrowth(ArrayList<Human> array) {
         int sum = 0;
-        int avg;
         for (int i = 0; i < array.size(); i++) {
             sum += array.get(i).getGrowth();
         }
-        avg = sum/array.size();
-        return avg;
+        return sum / array.size();
     }
-
-
 }
 

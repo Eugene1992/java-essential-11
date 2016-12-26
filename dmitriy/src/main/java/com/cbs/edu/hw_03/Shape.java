@@ -3,6 +3,7 @@ package com.cbs.edu.hw_03;
 /**
  * Created by Дмитрий on 25.12.2016.
  */
+// TODO: 26.12.2016 use abstraction!
 public class Shape {
     protected int a;
     protected int b;

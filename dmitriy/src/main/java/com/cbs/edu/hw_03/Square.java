@@ -5,17 +5,17 @@ package com.cbs.edu.hw_03;
  */
 public class Square extends Shape {
 
-    public Square (int a, String name){
+    public Square(int a, String name) {
         super(a, name);
     }
 
     @Override
-    public double getSquare(){
-        return a*a;
+    public double getSquare() {
+        return a * a;
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return name;
     }
 }
