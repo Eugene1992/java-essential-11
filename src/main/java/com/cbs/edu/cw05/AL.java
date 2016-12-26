@@ -1,4 +1,4 @@
-package com.cbs.edu.cw_05;
+package com.cbs.edu.cw05;
 
 public class AL extends AC implements L { // ArrayList
 
