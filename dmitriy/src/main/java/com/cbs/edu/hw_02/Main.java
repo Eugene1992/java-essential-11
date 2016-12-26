@@ -19,7 +19,7 @@ public class Main {
         Employee person4 = new Employee("Peter", 25, 1400);
         Employee person5 = new Employee("Jonhy", 22, 1200);
 
-        Department department = new Department("EPUM");
+        Department department = new Department("Department");
 
         department.addEmployee(person1);
         department.addEmployee(person2);

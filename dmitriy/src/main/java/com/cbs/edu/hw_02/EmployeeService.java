@@ -2,7 +2,7 @@ package com.cbs.edu.hw_02;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 /**
  * Created by Дмитрий on 25.12.2016.
  */
