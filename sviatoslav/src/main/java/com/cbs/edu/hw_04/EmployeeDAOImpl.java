@@ -13,7 +13,6 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
     public EmployeeDAOImpl() {
         this.employees = new ArrayList<>();
     }
-
     @Override
     public void add(Employee employee) {
         employees.add(employee);

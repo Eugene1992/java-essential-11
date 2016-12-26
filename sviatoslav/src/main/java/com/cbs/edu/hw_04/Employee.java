@@ -21,20 +21,20 @@ public class Employee {
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getSalary() {
+        return salary;
     }
 
     public void setSalary(int salary) {

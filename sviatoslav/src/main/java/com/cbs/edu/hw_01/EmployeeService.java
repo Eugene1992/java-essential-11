@@ -7,8 +7,8 @@ import java.util.ArrayList;
  */
 public class EmployeeService {
     public static double getAverage(ArrayList<Employee> employees){
-        int sum = 0;
-        int average;
+        double sum = 0;
+        double average;
         for (int i = 0; i < employees.size(); i++) {
             sum = sum + employees.get(i).getSalary();
         }
