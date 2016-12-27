@@ -52,6 +52,7 @@ public class Employee {
         }
     }
 
+
    public Employee(EmployeeBuilder employeeBuilder){
        this.firstName = employeeBuilder.firstName;
        this.sureName = employeeBuilder.sureName;
