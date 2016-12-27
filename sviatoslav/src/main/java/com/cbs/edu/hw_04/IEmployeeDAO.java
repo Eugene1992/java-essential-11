@@ -9,7 +9,7 @@ public interface IEmployeeDAO {
 
     void add(Employee employee);
 
-    void update(Employee employee, int id);
+    void update(int id, Employee employee);
 
     void delete(int id);
 
