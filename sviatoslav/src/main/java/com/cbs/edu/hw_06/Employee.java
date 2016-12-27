@@ -12,7 +12,7 @@ public class Employee {
     private String sex;
     private String residency;
 
-    public static class EmployeeBuilder{
+    public static class EmployeeBuilder {
         private String firstName;
         private String sureName;
         private int age;
@@ -53,7 +53,7 @@ public class Employee {
     }
 
 
-   public Employee(EmployeeBuilder employeeBuilder){
+   private Employee(EmployeeBuilder employeeBuilder){
        this.firstName = employeeBuilder.firstName;
        this.sureName = employeeBuilder.sureName;
        this.age = employeeBuilder.age;

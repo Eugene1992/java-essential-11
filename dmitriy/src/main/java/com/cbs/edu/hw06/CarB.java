@@ -11,7 +11,7 @@ public class CarB {
     private int maxSpeed;
     private int price;
 
-    private CarB(CarBuilder carBuilder){
+    private CarB(CarBuilder carBuilder) {
         this.brand = carBuilder.brand;
         this.model = carBuilder.model;
         this.type = carBuilder.type;
@@ -54,8 +54,20 @@ public class CarB {
         }
     }
 
+    @Override
+    public String toString() {
+        return "CarB{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", type='" + type + '\'' +
+                ", engineCapacity=" + engineCapacity +
+                ", maxSpeed=" + maxSpeed +
+                ", price=" + price +
+                '}';
+    }
+
     public static void main(String[] args) {
-        CarB carV = new CarBuilder("Volkswagen", "Golf GTI", "sedan").build();
-        System.out.println(carV.brand+"|"+carV.model+"|"+carV.type+"|"+carV.price+"$");
+        CarB carV = new CarBuilder("Volkswagen", "Golf GTI", "sedan").setPrice(1000).build();
+        System.out.println(carV);
     }
 }

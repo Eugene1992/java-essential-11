@@ -70,17 +70,24 @@ public class Controller {
         }
     }
 
-    public Employee getEmp() throws IOException {
+    private Employee getEmp() throws IOException {
         System.out.println("Enter name: ");
         String name = br.readLine();
-        System.out.println("Enter age: ");
-        int age = Integer.parseInt(br.readLine());
-        System.out.println("Enter Salary: ");
-        int salary = Integer.parseInt(br.readLine());
+        int age = 0;
+        int salary = 0;
+        try {
+            System.out.println("Enter age: ");
+            age = Integer.parseInt(br.readLine());
+            System.out.println("Enter Salary: ");
+            salary = Integer.parseInt(br.readLine());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid value! Try again!");
+            startListener();
+        }
         return new Employee(name, age, salary);
     }
 
-    public int getID() throws IOException {
+    private int getID() throws IOException {
         System.out.println("Enter ID: ");
         return Integer.parseInt(br.readLine());
     }
