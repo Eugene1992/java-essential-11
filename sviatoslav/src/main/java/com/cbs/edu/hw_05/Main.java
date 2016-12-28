@@ -37,6 +37,7 @@ public class Main {
 
         System.out.println();
 
+
         System.out.println("Плучить элемент с середины ArrayList'a занимает: " + arrayList.get(MIDDLE) + "c.");
         System.out.println("Плучить элемент с середины LinkedList'a занимает: " + linkedList.get(MIDDLE) + "c.");
 
