@@ -1,41 +1,45 @@
 package com.cbs.edu.hw_07;
 
-import java.util.Random;
-import java.util.Stack;
+import java.util.Arrays;
 
 /**
  * Created by Sviatoslav on 28.12.2016.
  */
 public class StackMethods {
-    private Random rnd = new Random();
-    private Stack<Integer> stack;
-    private static int size = 0;
+    private int size;
+    private int[] stack;
+    private int[] newStack;
+    private static int top;
 
-    public StackMethods(Stack<Integer> stack) {
-        this.stack = stack;
+    public StackMethods(int s) {
+        this.size = s;
+        stack = new int[size];
+        this.top = -1;
     }
 
-    public void insert() {
-        stack.push((-10 + rnd.nextInt(20 + 1)));
-        size++;
-        System.out.println("\nПредпологаемый размер стэка: " + size);
-        System.out.println("Выводим стэк на экран: ");
-        showStack();
-        System.out.println("Размер Стэка: " + stack.size());
+    public boolean isEmpty() {
+        boolean check = false;
+        if (top == -1) {
+            check = true;
+        }
+        return check;
     }
 
-    public void get() {
-        stack.pop();
-        size--;
-        System.out.println("Предпологаемый размер стэка: " + size);
-        System.out.println("Выводим стэк на экран: ");
-        showStack();
-        System.out.println("Размер Стэка: " + stack.size());
+    public void push(int element) {
+        int top = ++this.top;
+        stack[top] = element;
+        System.out.println(top);
     }
 
-    public void showStack() {
-        for (Integer num : stack) {
-            System.out.println(num);
+    public int pop() {
+        if (isEmpty()) {
+            return 0;
+        } else {
+            int element = stack[top];
+            top--;
+            newStack = Arrays.copyOf(stack, top);
+            System.out.print(newStack.length + " ");
+            return element;
         }
     }
 }
