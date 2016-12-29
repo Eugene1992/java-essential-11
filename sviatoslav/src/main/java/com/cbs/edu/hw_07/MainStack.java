@@ -14,9 +14,5 @@ public class MainStack {
         stackMethods.pop();
         stackMethods.pop();
         stackMethods.pop();
-
-
-        stackMethods.show();
-
     }
 }
