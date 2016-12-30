@@ -9,7 +9,7 @@ public class AnimalService {
     private AnimalService() {
     }
 
-    public static int getAvarage (ArrayList<Animal> animals) {
+    public static int getAvarage(ArrayList<Animal> animals) {
         int sum = 0;
         for (int i = 0; i < animals.size(); i++) {
             sum += animals.get(i).getWeight();
