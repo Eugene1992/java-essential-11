@@ -70,6 +70,7 @@
     <modules>
         <module>sviatoslav</module>
         <module>dmitriy</module>
+        <module>sasha</module>
     </modules>
 
     <groupId>com.cdb.edu</groupId>
