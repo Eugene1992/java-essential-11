@@ -7,13 +7,13 @@ import static com.cbs.edu.hw_05.TimeStampImpl.Insert;
  */
 public interface ITimeStamp {
 
-    double add(Insert insert, int num);
+    double add(Insert insert, int element, int cycle);
 
-    double get(Insert insert);
+    double get(Insert insert, int cycle);
 
-    double set(Insert insert, int num);
+    double set(Insert insert, int element, int cycle);
 
-    double remove(Insert insert);
+    double remove(Insert insert, int cycle);
 
 }
 

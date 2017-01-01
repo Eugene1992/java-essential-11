@@ -11,43 +11,42 @@ public class TimeStampImpl implements ITimeStamp {
     private final int sec = 100000000;
 
     enum Insert {
-        FIRST, MIDDLE, LAST;
-
+        FIRST, MIDDLE, LAST
     }
 
     public TimeStampImpl(List<Integer> integers) {
         this.integers = integers;
     }
 
-    public double add(Insert insert, int num) {
+    public double add(Insert insert, int element, int manyTimes) {
         double time = 0;
         switch (insert) {
 
             case FIRST:
                 long startTime = System.nanoTime();
-                for (int i = 0; i < 5; i++) {
-                    integers.add(0, num);
+                for (int i = 0; i < manyTimes; i++) {
+                    integers.add(0, element);
                 }
                 long endTime = System.nanoTime();
-                time = (endTime - startTime) / 5;
+                time = (endTime - startTime) / manyTimes;
                 return time / sec;
 
             case MIDDLE:
                 startTime = System.nanoTime();
-                for (int i = 0; i < 5; i++) {
-                    integers.add(integers.size() / 2, num);
+                for (int i = 0; i < manyTimes; i++) {
+                    integers.add(integers.size() / 2, element);
                 }
                 endTime = System.nanoTime();
-                time = (endTime - startTime) / 5;
+                time = (endTime - startTime) / manyTimes;
                 return time / sec;
 
             case LAST:
                 startTime = System.nanoTime();
-                for (int i = 0; i < 5; i++) {
-                    integers.add(num);
+                for (int i = 0; i < manyTimes; i++) {
+                    integers.add(element);
                 }
                 endTime = System.nanoTime();
-                time = (endTime - startTime) / 5;
+                time = (endTime - startTime) / manyTimes;
                 return time / sec;
 
             default:
@@ -56,7 +55,7 @@ public class TimeStampImpl implements ITimeStamp {
         return time;
     }
 
-    public double get(Insert insert) {
+    public double get(Insert insert, int manyTimes) {
         double time = 0;
         if (!integers.isEmpty()) {
             switch (insert) {
@@ -64,31 +63,31 @@ public class TimeStampImpl implements ITimeStamp {
                 case FIRST:
 
                     long startTime = System.nanoTime();
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < manyTimes; i++) {
                         integers.get(0);
                     }
                     long endTime = System.nanoTime();
-                    time = (endTime - startTime) / 5;
+                    time = (endTime - startTime) / manyTimes;
                     return time / sec;
 
                 case MIDDLE:
 
                     startTime = System.nanoTime();
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < manyTimes; i++) {
                         integers.get((integers.size() - 1) / 2);
                     }
                     endTime = System.nanoTime();
-                    time = (endTime - startTime) / 5;
+                    time = (endTime - startTime) / manyTimes;
                     return time / sec;
 
                 case LAST:
 
                     startTime = System.nanoTime();
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < manyTimes; i++) {
                         integers.get((integers.size() - 1));
                     }
                     endTime = System.nanoTime();
-                    time = (endTime - startTime) / 5;
+                    time = (endTime - startTime) / manyTimes;
                     return time / sec;
 
                 default:
@@ -101,37 +100,37 @@ public class TimeStampImpl implements ITimeStamp {
         return time;
     }
 
-    public double set(Insert insert, int num) {
+    public double set(Insert insert, int element, int manyTimes) {
         double time = 0;
         switch (insert) {
 
             case FIRST:
 
                 long startTime = System.nanoTime();
-                for (int i = 0; i < 5; i++) {
-                    integers.set(0, num);
+                for (int i = 0; i < manyTimes; i++) {
+                    integers.set(0, element);
                 }
                 long endTime = System.nanoTime();
-                time = (endTime - startTime) / 5;
+                time = (endTime - startTime) / manyTimes;
                 return time / sec;
 
             case MIDDLE:
 
                 startTime = System.nanoTime();
-                for (int i = 0; i < 5; i++) {
-                    integers.set((integers.size() - 1) / 2, num);
+                for (int i = 0; i < manyTimes; i++) {
+                    integers.set((integers.size() - 1) / 2, element);
                 }
                 endTime = System.nanoTime();
-                time = (endTime - startTime) / 5;
+                time = (endTime - startTime) / manyTimes;
                 return time / sec;
 
             case LAST:
                 startTime = System.nanoTime();
-                for (int i = 0; i < 5; i++) {
-                    integers.set((integers.size() - 1), num);
+                for (int i = 0; i < manyTimes; i++) {
+                    integers.set((integers.size() - 1), element);
                 }
                 endTime = System.nanoTime();
-                time = (endTime - startTime) / 5;
+                time = (endTime - startTime) / manyTimes;
                 return time / sec;
 
             default:
@@ -140,7 +139,7 @@ public class TimeStampImpl implements ITimeStamp {
         return time;
     }
 
-    public double remove(Insert insert) {
+    public double remove(Insert insert, int manyTimes) {
         double time = 0;
         if (!integers.isEmpty()) {
             switch (insert) {
@@ -148,31 +147,31 @@ public class TimeStampImpl implements ITimeStamp {
                 case FIRST:
 
                     long startTime = System.nanoTime();
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < manyTimes; i++) {
                         integers.remove(0);
                     }
                     long endTime = System.nanoTime();
-                    time = (endTime - startTime) / 5;
+                    time = (endTime - startTime) / manyTimes;
                     return time / sec;
 
                 case MIDDLE:
 
                     startTime = System.nanoTime();
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < manyTimes; i++) {
                         integers.remove((integers.size() - 1) / 2);
                     }
                     endTime = System.nanoTime();
-                    time = (endTime - startTime) / 5;
+                    time = (endTime - startTime) / manyTimes;
                     return time / sec;
 
                 case LAST:
 
                     startTime = System.nanoTime();
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < manyTimes; i++) {
                         integers.remove((integers.size() - 1));
                     }
                     endTime = System.nanoTime();
-                    time = (endTime - startTime) / 5;
+                    time = (endTime - startTime) / manyTimes;
                     return time / sec;
 
                 default:
