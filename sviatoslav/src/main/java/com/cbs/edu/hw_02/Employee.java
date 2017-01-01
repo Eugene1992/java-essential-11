@@ -1,13 +1,21 @@
 package com.cbs.edu.hw_02;
 
 /**
- * Created by Sviatoslav on 22.12.2016.
+ * Class for creating new employee.
+ * @author Sviatoslav
+ * @version 2.0
  */
 public class Employee {
     private String name;
     private int age;
     private int salary;
 
+    /**
+     * Constructor
+     * @param name - name for new employee;
+     * @param age - age for new employee;
+     * @param salary - salary for employee;
+     */
     public Employee(String name, int age, int salary) {
         this.name = name;
         this.age = age;

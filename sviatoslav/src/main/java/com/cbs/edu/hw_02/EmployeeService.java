@@ -4,11 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Sviatoslav on 22.12.2016.
+ * @author Sviatoslav
+ * @version 2.0
  */
 public class EmployeeService {
 
-
+    /**
+     *
+     * @param department - department where we have employee;
+     * @param from - beginning of salary interval(non-include)
+     * @param to - the end of salary interval(non-include)
+     * @return - employees, whose salary between "from" and "to";
+     */
     public static List<Employee> getSalaryIntervalForEach(Department department, int from, int to) {
         List<Employee> employees = new ArrayList<>();
         for (Employee emp : department.getEmp())
@@ -17,7 +24,13 @@ public class EmployeeService {
             }
         return employees;
     }
-
+    /**
+     *
+     * @param department - department where we have employee;
+     * @param from - beginning of age interval(non-include)
+     * @param to - the end of age interval(non-include)
+     * @return - employees, whose age between "from" and "to";
+     */
     public static List<Employee> getAgeIntervalForEach(Department department, int from, int to) {
         List<Employee> employees = new ArrayList<>();
         for (Employee emp : department.getEmp())
@@ -27,6 +40,12 @@ public class EmployeeService {
         return employees;
     }
 
+    /**
+     *
+     * @param department - department where we have employee;
+     * @param bonus - bones which will add to salary;
+     * @return employees salary with added bonus;
+     */
     public static List<Employee> addBonus(Department department, int bonus) {
         List<Employee> employees = new ArrayList<>();
         for (Employee emp : department.getEmp()) {
