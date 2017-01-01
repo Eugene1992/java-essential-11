@@ -8,7 +8,7 @@ public class Shape {
     protected int b;
     protected String name;
 
-    public Shape(int a, int b ,String name) {
+    public Shape(int a, int b, String name) {
         this.a = a;
         this.b = b;
         this.name = name;
@@ -17,6 +17,14 @@ public class Shape {
     public Shape(int a, String name) {
         this.a = a;
         this.name = name;
+    }
+
+    public int getA() {
+        return a;
+    }
+
+    public int getB() {
+        return b;
     }
 
     public double getArea() {

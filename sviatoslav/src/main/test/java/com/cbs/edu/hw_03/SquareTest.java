@@ -2,16 +2,19 @@ package com.cbs.edu.hw_03;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Sviatoslav on 24.12.2016.
  */
 public class SquareTest {
-    private int a = 4;
+    Square square = new Square(4, "asdf");
+
     @Test
     public void getArea() throws Exception {
-        assertTrue("No!", (int)Math.pow(a,2) == 16);
+        final double EXPECTED_RESULT = square.getA() * square.getA();
+        final double RESULT = square.getArea();
+        assertEquals(EXPECTED_RESULT, RESULT, 2);
     }
 
 }

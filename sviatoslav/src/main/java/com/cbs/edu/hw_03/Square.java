@@ -6,7 +6,7 @@ package com.cbs.edu.hw_03;
 public class Square extends Shape {
 
     public Square(int a, String name) {
-        super(a,name);
+        super(a, name);
     }
 
     @Override

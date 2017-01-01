@@ -10,7 +10,7 @@ public class Triangle extends Shape {
 
     @Override
     public double getArea() {
-        return ( a * b ) / 2;
+        return (a * b) / 2;
     }
 
     @Override

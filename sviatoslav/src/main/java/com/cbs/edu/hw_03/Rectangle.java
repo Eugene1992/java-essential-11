@@ -5,7 +5,7 @@ package com.cbs.edu.hw_03;
  */
 public class Rectangle extends Shape {
 
-    public Rectangle(int a, int b, String name){
+    public Rectangle(int a, int b, String name) {
         super(a, b, name);
     }
 

@@ -1,19 +1,19 @@
 package com.cbs.edu.hw_03;
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Sviatoslav on 24.12.2016.
  */
 public class TriangleTest {
-    private int a = 5;
-    private int b = 4;
+    Triangle triangle = new Triangle(4, 4, "adsf");
 
     @Test
     public void getArea() throws Exception {
-        assertEquals(10, (( a * b ) / 2));
+        final double EXPECTED_RESULT = triangle.getA() * triangle.getB() / 2;
+        final double RESULT = triangle.getArea();
+        Assert.assertEquals(EXPECTED_RESULT,RESULT, 2);
     }
 
 }

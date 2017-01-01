@@ -3,8 +3,8 @@ package com.cbs.edu.hw_03;
 /**
  * Created by Sviatoslav on 22.12.2016.
  */
-public class Parallelogram  extends Shape{
-    public Parallelogram(int a, int b, String name){
+public class Parallelogram extends Shape {
+    public Parallelogram(int a, int b, String name) {
         super(a, b, name);
     }
 
