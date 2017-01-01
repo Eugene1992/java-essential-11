@@ -6,11 +6,15 @@ import java.util.List;
 /**
  * Created by Sviatoslav on 29.12.2016.
  */
-public class nullPointExept {
-    public static void main(String[] args) throws NullPointerException{
+public class NullPointExept {
+    public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
         list = null;
-        list.add(644);
+        try {
+            list.add(644);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }
