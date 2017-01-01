@@ -9,10 +9,10 @@ public class StackMethods {
     private int size;
     private int[] stack;
     private int[] newStack;
-    private static int top;
+    private int top;
 
-    public StackMethods(int s) {
-        this.size = s;
+    public StackMethods(int size) {
+        this.size = size;
         stack = new int[size];
         this.top = -1;
     }
@@ -26,9 +26,16 @@ public class StackMethods {
     }
 
     public void push(int element) {
-        int top = ++this.top;
-        stack[top] = element;
-        System.out.println(top);
+        if (stack.length < size) {
+            int top = ++this.top;
+            stack[top] = element;
+        } else if (stack.length >= size) {
+            newStack = Arrays.copyOf(stack, size * 3 / 2 + 1);
+            stack = null;
+            stack = newStack;
+            int top = ++this.top;
+            stack[top] = element;
+        }
     }
 
     public int pop() {
@@ -37,8 +44,6 @@ public class StackMethods {
         } else {
             int element = stack[top];
             top--;
-            newStack = Arrays.copyOf(stack, top);
-            System.out.print(newStack.length + " ");
             return element;
         }
     }

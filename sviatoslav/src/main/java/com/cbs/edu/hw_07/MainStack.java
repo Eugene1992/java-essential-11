@@ -5,7 +5,7 @@ package com.cbs.edu.hw_07;
  */
 public class MainStack {
     public static void main(String[] args) {
-        StackMethods stackMethods = new StackMethods(10);
+        StackMethods stackMethods = new StackMethods(3);
         stackMethods.push(1000);
         stackMethods.push(1001);
         stackMethods.push(1002);
