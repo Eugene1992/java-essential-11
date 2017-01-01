@@ -7,12 +7,14 @@ import static com.cbs.edu.hw_01.EmployeeService.getAverage;
 
 
 /**
- * Created by Sviatoslav on 22.12.2016.
+ * Class which include method for start our application
+ * @author Sviatoslav
+ * @version 1.0
  */
 public class MainEmp {
     public static void main(String[] args) {
 
-        ArrayList<Employee> arr = new ArrayList<Employee>(5);
+        ArrayList<Employee> arr = new ArrayList<>();
         Employee employee1 = new Employee("Arek", "Worker", 1453);
         Employee employee2 = new Employee("Alex", "Worker", 4562);
         Employee employee3 = new Employee("Ivan", "Worker", 722876);

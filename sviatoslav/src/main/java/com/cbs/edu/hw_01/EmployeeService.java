@@ -3,9 +3,16 @@ package com.cbs.edu.hw_01;
 import java.util.ArrayList;
 
 /**
- * Created by Sviatoslav on 22.12.2016.
+ * Class for realize business logic, include only one method getAverage().
+ * @author Sviatoslav
+ * @version 1.0
  */
 public class EmployeeService {
+    /**
+     *
+     * @param employees - collection for storing all our employees
+     * @return average salary our employee;
+     */
     public static double getAverage(ArrayList<Employee> employees){
         double sum = 0;
         double average;

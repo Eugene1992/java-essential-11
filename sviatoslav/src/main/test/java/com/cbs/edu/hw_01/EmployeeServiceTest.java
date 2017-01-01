@@ -1,39 +1,35 @@
 package com.cbs.edu.hw_01;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Sviatoslav on 24.12.2016.
  */
 public class EmployeeServiceTest {
-    private final List<Integer> list = new ArrayList<>();
+    private double sum = 0;
+    private ArrayList<Employee> employees;
 
     @Before
-    public void init() {
-        list.add(10);
-        list.add(15);
-        list.add(20);
-    }
-    @After
-    public void tearDown(){
-        list.clear();
+    public void setUp() {
+        employees = new ArrayList<>();
+        employees.add(new Employee("alex", "manager", 2112));
+        employees.add(new Employee("bob", "manager", 15582));
+        employees.add(new Employee("alex", "manager", 399874));
+        for (int i = 0; i < employees.size(); i++) {
+            sum = sum + employees.get(i).getSalary();
+        }
     }
 
     @Test
-    public void getAverage() throws Exception {
-        int sum = 0;
-        for (int i = 0; i < list.size(); i++) {
-             sum = sum + list.get(i);
-        }
-        int avg = sum / list.size();
-        assertEquals(15, avg);
+    public void getAverage() {
+        final double EXPECTED_RESULT = sum / employees.size();
+        final double RESULT = EmployeeService.getAverage(employees);
+        assertEquals(EXPECTED_RESULT, RESULT, 2 );
     }
 }
 
